@@ -1,4 +1,4 @@
-# Readable Math Output Skill
+# Readable Math Output Skill   codex公式格式修改
 
 Readable Math Output is a small Codex skill for making formula-heavy answers easier to read in Codex chat.
 
