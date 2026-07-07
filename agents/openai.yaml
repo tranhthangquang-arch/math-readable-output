@@ -1,0 +1,4 @@
+interface:
+  display_name: "Readable Math Output"
+  short_description: "Format formulas for clearer Codex chat reading."
+  default_prompt: "Use $math-readable-output to explain this derivation with readable block formulas."
