@@ -1,6 +1,6 @@
 ---
 name: math-readable-output
-description: Default formatting policy for any answer that contains mathematical formulas, symbolic variables, equations, derivations, proofs, algorithm equations, control theory, signal processing, statistics, optimization, machine learning objectives, matrices, vectors, recurrence relations, LaTeX, or paper-style math explanation. Always use this skill whenever Codex will output formulas or symbolic math, even if the user does not explicitly request readable formula formatting. Use for readable formula output, math explanation, derivation, algorithm formulas, RLS, Kalman, adaptive filters, control systems, signal processing, probability, statistics, linear algebra, optimization, and scientific paper explanations.
+description: "MANDATORY default for any response that will include, explain, derive, compare, or transform formulas, symbolic variables, equations, LaTeX, matrices, vectors, proofs, objectives, constraints, or algorithm update rules, even when the user does not explicitly say formula. Trigger for a pasted equation or requests such as 解释这个算法/原理, 推导, 目标函数, 递推公式, 更新规律, 证明, 矩阵, and for technical topics that normally need equations: RLS, Kalman, adaptive filters, control, signal processing, optimization, statistics, machine learning, and paper explanations. Use readable Markdown LaTeX block formulas rather than plain-text formula code blocks."
 ---
 
 # Math Readable Output
@@ -11,6 +11,10 @@ Make math-heavy Codex answers readable even when the chat UI does not render LaT
 
 ## Default Invocation
 
+- Apply this skill whenever the planned answer is likely to contain even one non-trivial formula; the user's prompt itself does not need to include symbols or the word "公式".
+- Treat implicit Chinese requests such as "解释这个算法", "原理是什么", "怎么推导", "更新过程", "目标是什么", "给出递推", "这个矩阵怎么来的", and "论文里的这个方法" as formula-triggering when equations would make the answer clearer.
+- Trigger when the user pastes LaTeX, a screenshot of an equation, or any symbolic expression, including requests that only ask to explain or rewrite it.
+- Do not skip this skill merely because the requested topic is described in prose. Skip it only when the user explicitly requests no formulas or the answer genuinely needs no symbolic notation.
 - Use this skill by default whenever an answer will contain formulas, equations, symbolic variables, derivations, proofs, matrices, vectors, optimization objectives, recurrence relations, or algorithm update rules.
 - Use this skill even when the user asks a general technical question and formulas are only part of the answer.
 - Do not wait for explicit phrases such as "use readable math" or "format the formula"; formula-bearing answers should opt into this formatting style automatically.

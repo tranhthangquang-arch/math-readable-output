@@ -1,4 +1,4 @@
 interface:
   display_name: "Readable Math Output"
-  short_description: "Format formulas for clearer Codex chat reading."
-  default_prompt: "Use $math-readable-output to explain this derivation with readable block formulas."
+  short_description: "Always use readable block math for formulas, derivations, and equation-heavy technical explanations."
+  default_prompt: "Explain this algorithm, including its objective and update equations, with readable block formulas."
